@@ -1,1 +1,5 @@
-document.querySelector("#ham").onclick = function(){alert(clicked)};
+let ham = document.querySelector('#ham');
+ham.addEventListener('click',(event)=>{
+    console.log(5);
+    console.log(event);
+});
