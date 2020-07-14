@@ -1,0 +1,104 @@
+body{
+    margin: 0;  
+}
+img{
+    max-width: 100%;
+}
+.mobile-menu, #close{
+    display:none;
+}
+.container{
+    max-width: 90vw;
+    margin: auto;
+}
+header .container div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+main{
+    position: relative;
+    overflow: hidden;
+}
+main figure:first-of-type{
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    top: -3%;
+    z-index: -1;
+    /* border: 1px solid darkorange; */
+}
+main figure:first-of-type img{
+    position: absolute;
+    right: -15%;
+    top: -45%;
+    filter: opacity(0.4);
+} 
+main h1{
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 6vh;
+    color: hsl(228, 39%, 23%);
+}
+main p:first-of-type, .letter{
+    text-align: justify;
+    color:hsl(227, 12%, 61%);
+    font-size: 1.1em;  
+    width: 90%;
+    margin: auto;  
+}
+main figure:nth-of-type(3){
+    position: absolute;
+    height: 50vh;
+    top: 22%;
+    right: -65%;
+    z-index: -5;
+    width: 100vw;
+}
+.button{
+    padding: 7% 10%;
+    background: hsl(12, 88%, 59%);
+    text-align: center;
+    line-height: 180%;
+    border-radius: 2em;
+    width: 55%;
+    margin: 12% auto;
+    z-index: 3;
+    font-size: 1.2em;
+    font-weight: 500;
+    color:white;
+    box-shadow:0 10px 6px hsl(13, 100%, 96%);
+}
+main h2{
+    color: hsl(228, 39%, 23%);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin: 25% auto 0 auto;
+}
+.letter{
+    text-align: left;
+}
+.shalaye{
+    width: 100%;
+    font-size: 1.0em;
+    padding: 0.8em;
+    background: hsl(13, 100%, 96%);
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    opacity: 50%;
+    color:hsl(228, 39%, 23%);
+    text-align: start;
+    display: flex;
+    box-sizing: border-box;
+}
+.shalaye span{
+    color: white;
+    background-color: hsl(12, 88%, 59%);
+    opacity: 100;
+    padding: 0.81em;
+    margin-left: -5%;
+    width: 8%;
+}
+
