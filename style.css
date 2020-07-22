@@ -4,6 +4,9 @@ body{
 img{
     max-width: 100%;
 }
+li{
+    list-style-type: none;
+}
 .mobile-menu, #close{
     display:none;
 }
@@ -57,11 +60,11 @@ main figure:nth-of-type(3){
     width: 100vw;
 }
 .button{
-    padding: 7% 10%;
+    padding: 5% 10%;
     background: hsl(12, 88%, 59%);
     text-align: center;
     line-height: 180%;
-    border-radius: 2em;
+    border-radius: 50px;
     width: 55%;
     margin: 12% auto;
     z-index: 3;
@@ -70,7 +73,7 @@ main figure:nth-of-type(3){
     color:white;
     box-shadow:0 10px 6px hsl(13, 100%, 96%);
 }
-main h2{
+main h2:first-of-type{
     color: hsl(228, 39%, 23%);
     text-align: center;
     font-size: 1.5em;
@@ -79,30 +82,121 @@ main h2{
 }
 .letter{
     text-align: left;
+    padding-top: 0.8em;
+}.function{
+    padding: 1em 0;
 }
 .shalaye{
     width: 100%;
-    font-size: 1.0em;
-    padding: 0.8em;
     background: hsl(13, 100%, 96%);
-    border-top-left-radius: 20%;
-    border-bottom-left-radius: 20%;
-    opacity: 50%;
     color:hsl(228, 39%, 23%);
-    text-align: start;
     display: flex;
-    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: bold;
+    align-content: flex-start;
+    border-top-left-radius:  3em;
+    border-bottom-left-radius:  3em;
 }
 .shalaye span{
     color: white;
     background-color: hsl(12, 88%, 59%);
-    opacity: 100;
-    padding: 0.81em;
-    margin-left: -5%;
-    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3em;
+    width: 20%;
+    margin-left: -2vw;
+}
+.shalaye h3{
+    width: 78%;
+    font-size: .91em;
+    /* border: 1px solid turquoise; */
+}
+#testimonials{
+    display: flex;
+    flex-direction: column;
+}
+#slider-container{
+    display: flex;
+    flex-direction: row;
+}
+.user{
+    width: 100%;
+    background:hsl(0, 0%, 98%);
+    display: grid;
+    padding: 1.5em;
+    margin-top: 6em;
+    /* border: 1px solid red; */
+    place-content: center;
+}
+.user p:first-of-type{
+    color:hsl(228, 39%, 23%);
+    margin-top: -2em;
+    text-align: center;
+    font-weight: bold;
+}
+.user :nth-of-type(2){
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+    color: hsl(227, 12%, 61%);
+}
+.user img{
+    position: relative;
+    top: -50%;
+    left: 28%;
+}
+#slider{
+    width: 25%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#slider span{
+    padding: 0.3em;
+    border-radius: 50%;
+    border: 1px solid hsl(12, 88%, 59%);
+}
+.active-slide{
+    background: hsl(12, 88%, 59%);
+}
+#pre-footer{
+    width: 100%;
+    background-color: hsl(12, 88%, 59%);
+    position: relative;
+    height: 70vh;
+}
+#pre-footer img{
+    position: absolute;
+    left: -75vw;
+    top:10vh;
+    filter: opacity(10%);
+    height: 90%;
+}
+#pre-footer h1{
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 1.8em;
+    z-index: 3;
+    margin-bottom: 1em;
+    font-size: 2.4em;
+    line-height: 1em;
+}
+#pre-footer .button{
+    color: hsl(12, 88%, 59%);
+    background: white;
+    width: 40%;
+    font-weight: bold;
+    margin: auto;
+    box-shadow:0 0 0 0;
+    text-align: center;
 }
 footer .container{
-    padding-top: 1em;
+    padding-top: 1.8em;
     padding-bottom: 1em; 
 }
 footer .container div:first-of-type{
@@ -130,6 +224,19 @@ footer .container div:first-of-type div:nth-of-type(2){
     border-radius: 25px;
     text-align: center;
     line-height: 3em;
+    font-weight: bold;
+}
+footer nav ul{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 30vh;
+    margin-top: 8vh;
+    font-size: 1.2em;
+    flex-wrap: wrap;
+}
+ul li{
+    margin: .5em;
 }
 #socials{
     width: 100%;
@@ -155,7 +262,6 @@ footer p, .attribution{
     color:hsl(12, 88%, 59%);
 }
 footer{
-    margin-top: 1em;
     display: flex;
     flex-direction: column;
     background:hsl(233, 12%, 13%);
