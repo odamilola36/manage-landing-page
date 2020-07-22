@@ -101,4 +101,63 @@ main h2{
     margin-left: -5%;
     width: 8%;
 }
+footer .container{
+    padding-top: 1em;
+    padding-bottom: 1em; 
+}
+footer .container div:first-of-type{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    justify-content: space-between;
+}
+footer .container div:first-of-type div:first-of-type{
+    overflow: hidden;    
+    border-radius: 25px;
+    width: 67%;
+}
+footer input{
+    width: 100%;
+}
+footer input[placeholder]{
+    padding-left: 5vw;
+}
+footer .container div:first-of-type div:nth-of-type(2){
+    background: hsl(12, 88%, 59%);
+    color: white;
+    width: 30%;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 3em;
+}
+#socials{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#footer-logo img{
+    max-width: 100%;
+} 
+#footer-logo{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 8vh 0;
+}
+footer p, .attribution{
+    text-align: center;
+    color: white;
+}
+.attribution a{
+    text-decoration: none;
+    color:hsl(12, 88%, 59%);
+}
+footer{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    background:hsl(233, 12%, 13%);
+}
 
