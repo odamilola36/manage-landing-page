@@ -1,46 +1,111 @@
+@import url(https://fonts.google.com/specimen/Be+Vietnam);
+
 body{
-    margin: 0;  
+    margin: 0;       
 }
 *{
-    font-size: calc(16px + (20 - 16)*((100vw - 375px)/(768 -375)));
+    /* overflow-x: hidden; */
+    font-size: calc(16px + (20 - 16)*((100vw - 375px)/(680 -375)));
+}
+#header-bg-wrapper, main{
+    overflow-x: hidden;
 }
 img{
     max-width: 100%;
+    height: auto;
 }
 li{
     list-style-type: none;
 }
-.mobile-menu, #close{
+.mobile-menu, header p,mobile-close-btn, .desktop-hide{
     display:none;
 }
 .container{
-    max-width: 90vw;
     margin: auto;
+    max-width: 90vw;
 }
 header .container div{
     display: flex;
     justify-content: space-between;
     margin-top: 2vh;
 }
-main{
+#mo-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+header, main{
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    /* overflow-x: unset; */
 }
-main figure:first-of-type{
+.bg-drop{
     position: absolute;
-    height: 50vh;
-    width: 100vw;
-    margin: 0;
-    top: -3%;
-    z-index: -1;
+    z-index: -2;
 }
-main figure:first-of-type img{
+main .bg-drop{
+    bottom: 70%;
+    left: 46%;
+    right: -98%;
+}
+.function .letter{
+    text-align: left;
+}
+header .bg-drop{
+    right: -27%;
+    left: 20%;
+    top: -160%;
+}
+#mid-belt{
+    margin-top: 3em;
+}
+.show-nav{
     position: absolute;
-    right: -15%;
-    top: -45%;
-    filter: opacity(0.4);
-    width: 100vw;
+    background: white;
+    top:8vh;
+    width: 90%; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    padding:  1em 0;
+    z-index: 7;
+    border-radius: 0.3em;
+    animation-name: nav-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+}
+.navs{
+    animation-name: buttons;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+@keyframes buttons{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes nav-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.mobile-menu li{
+    color: hsl(228, 39%, 23%);
+    font-weight: bold;
+    margin: 1em auto 1em -.53em;
 } 
+.mobile-menu ul{
+    padding: 0;
+}
 main h1{
     text-align: center;
     font-size: 2.2em;
@@ -48,31 +113,22 @@ main h1{
     color: hsl(228, 39%, 23%);
 }
 main p:first-of-type, .letter{
-    text-align: justify;
+    text-align: center;
     color:hsl(227, 12%, 61%);
     font-size: 1.1em;  
     width: 90%;
     margin: auto;  
 }
-main figure:nth-of-type(3){
-    position: absolute;
-    z-index: -5;
-    width: 100vw;
-    top: 60vh;
-    right: -45vh;
-}
 .button{
-    padding: 5% 10%;
+    padding: 1em;
     background: hsl(12, 88%, 59%);
-    text-align: center;
-    line-height: 180%;
+    line-height: 2em;
     border-radius: 50px;
-    width: 55%;
-    margin: 12% auto;
-    z-index: 3;
+    width: 50%!important;
+    margin: 12% auto !important;
     font-size: 1.2em;
     font-weight: 500;
-    color:white;
+    color:white !important;
     box-shadow:0 10px 6px hsl(13, 100%, 96%);
 }
 #more{
@@ -91,6 +147,7 @@ main h2:first-of-type{
     
 }
 .letter{
+    font-size: 1rem;
     text-align: left;
     padding-top: 0.8em;
 }.function{
@@ -121,23 +178,33 @@ main h2:first-of-type{
 .shalaye h3{
     width: 78%;
     font-size: .91em;
-    /* border: 1px solid turquoise; */
 }
 #testimonials{
     display: flex;
     flex-direction: column;
 }
+#testimonials h2{       
+    margin: 0;
+}
 #slider-container{
+    /* border: 1px solid seagreen; */
+    /* overflow-x: hidden; */
+}
+#user-wrapper{
     display: flex;
     flex-direction: row;
+    width: 400vw;
+    position: relative;
+    left: -103%;
+    /* border: 1px solid red; */
 }
 .user{
-    width: 100%;
+    width: 23%;
     background:hsl(0, 0%, 98%);
     display: grid;
     padding: 1.5em;
+    /* border: 1px solid turquoise; */
     margin-top: 6em;
-    /* border: 1px solid red; */
     place-content: center;
 }
 .user p:first-of-type{
@@ -146,7 +213,7 @@ main h2:first-of-type{
     text-align: center;
     font-weight: bold;
 }
-.user :nth-of-type(2){
+.user p:nth-of-type(2){
     padding: 1em;
     text-align: center;
     margin: auto;
@@ -154,7 +221,7 @@ main h2:first-of-type{
 }
 .user img{
     position: relative;
-    top: -50%;
+    top: -65%;
     left: 28%;
 }
 #slider{
@@ -176,14 +243,14 @@ main h2:first-of-type{
     width: 100%;
     background-color: hsl(12, 88%, 59%);
     position: relative;
-    height: 70vh;
+    /* height: 70vh; */
+    overflow-y: hidden;
 }
 #pre-footer img{
     position: absolute;
     left: -75vw;
     top:10vh;
     filter: opacity(10%);
-    height: 90%;
 }
 #pre-footer h1{
     color: white;
@@ -197,7 +264,7 @@ main h2:first-of-type{
     line-height: 1em;
 }
 #pre-footer .button{
-    color: hsl(12, 88%, 59%);
+    color: hsl(12, 88%, 59%)!important;
     background: white;
     width: 40%;
     font-weight: bold;
@@ -209,11 +276,11 @@ footer .container{
     padding-top: 1.8em;
     padding-bottom: 1em; 
 }
-footer .container div:first-of-type{
+footer .container #search-wrapper{
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 8vh;
+    /* height: 8vh; */
     justify-content: space-between;
 }
 footer .container div:first-of-type div:first-of-type{
@@ -223,6 +290,7 @@ footer .container div:first-of-type div:first-of-type{
 }
 footer input{
     width: 100%;
+    padding: 1em;
 }
 footer input[placeholder]{
     padding-left: 5vw;
@@ -233,15 +301,16 @@ footer .container div:first-of-type div:nth-of-type(2){
     width: 30%;
     border-radius: 25px;
     text-align: center;
-    line-height: 3em;
+    line-height: 3.3em;
     font-weight: bold;
 }
 footer nav ul{
     display: flex;
     flex-direction: column;
     color: white;
+    align-content: space-between;
+    margin-left: -1em;
     height: 24vh;
-    margin-top: 8vh;
     font-size: 1.2em;
     flex-wrap: wrap;
 }
@@ -253,19 +322,25 @@ ul li{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 1.5em;
 }
 #footer-logo img{
     max-width: 100%;
 } 
-#footer-logo{
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    padding: 8vh 0;
-}
 footer p, .attribution{
     text-align: center;
     color: white;
+}
+.attribution{
+    width: 80%;
+    margin: .5em auto;
+}
+#links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 10vh; */
 }
 .attribution a{
     text-decoration: none;
@@ -276,4 +351,294 @@ footer{
     flex-direction: column;
     background:hsl(233, 12%, 13%);
 }
-
+@media screen and (min-width: 680px){
+    *{
+        overflow: unset;
+    }
+    body, #slider-container{
+        overflow-x:hidden;
+    }
+    .container{
+        width: 80%;
+    }
+    .show-nav{
+        width: 80vw;
+    }
+    #mid-belt div:first-of-type h1{
+        font-size: 1.5rem;
+    }
+    main .bg-drop{
+        bottom:65%;
+        left: 52%;
+        right: -67%;
+    }
+    header .bg-drop{
+        right: -34%;
+        left: 24%;
+        top: -480%;
+    }
+    .user img{
+        top:-76%;
+        left: 40%;
+    }
+    footer nav ul{
+        height:28vh;
+    }
+} 
+@media screen and (min-width:1024px){
+    body{
+        overflow-x:hidden;
+    }
+    *{
+        overflow-x:unset; 
+        font-size: 16px;
+    }
+    .mobile, .hide, .mobile-navs{
+            display: none;
+    }
+    .container{
+        width: 80%;
+    }
+    header{
+        overflow: unset;
+        height: 20vh;
+    }
+    header p{
+        display: block;
+    }
+    header::before, main::after,
+    #pre-footer::before, 
+    #pre-footer::after{
+        content: url("./images/bg-tablet-pattern.svg");
+        position: absolute;
+        z-index: -2;
+    } 
+    #nav-wrapper{
+        display: flex;
+        flex-direction: row;
+    } 
+    header::before {
+        top: -120%;
+        right: -10%;
+    }
+    main::after{
+        bottom: 20%;
+        left: -40%
+    }
+    #nav-wrapper div:first-of-type{
+        width: fit-content;
+        flex-direction: column;
+        display: flex;
+        place-content: center;
+    }
+    .desktop{
+        display: flex;
+        width: 70%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .desktop ul{
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .desktop ul li{
+        margin:0;
+        padding: 0 0.5em;
+    }
+    #mid-belt{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 10vh;
+    }
+    #mid-belt div:first-of-type{
+        width: 40%;
+        margin-top: 4em;
+        display: flex;
+        flex-direction: column;
+        align-content: space-evenly;        
+    }
+    #mid-belt h1,
+    #mid-belt p:first-of-type,
+    #semantic div:first-of-type h2,
+    #semantic div:first-of-type p{
+        text-align: start;
+        font-size: 1rem;
+        margin: 0;
+    } 
+    #mid-belt p:first-of-type,
+    #semantic div:first-of-type p{
+        margin: 1em 0 0 0;
+    }
+    #semantic{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10vh;
+    }
+    .shalaye{
+        margin: 0;
+        background: transparent;
+    }
+    .shalaye h3{
+        font-size: 1em;
+    }
+    #testimonials{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 5em;
+    }
+    #slider-container{
+        flex-direction: column;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    #user-wrapper{
+        display: flex;
+        flex-direction: row;
+        width: 260vw;
+        justify-content: space-between;
+        position: relative;
+        left: -113%;
+    }
+    .user{
+        width: clamp(23%, 23%, 25%);
+        background: hsl(0, 0%, 98%);
+    }
+    .user p:nth-of-type(2){
+        color: hsl(228, 39%, 23%);
+        padding: 0;
+        width: 100%;
+        font-size: 0.8em;
+        text-align: center;
+        line-height: 1.5em;
+        
+    }
+    .button {
+        background: hsl(12, 88%, 59%);
+        text-align: center !important;
+        border-radius: 50px;
+        width: 12vw !important;
+        margin: 5% auto 10% auto !important;
+        font-size: 1em !important;
+        font-weight: 700 !important;
+        padding: 1em;
+        color: white !important;
+        box-shadow: 0 10px 6px hsl(13, 100%, 96%);
+    }
+    .button:hover,
+    #search-wrapper div:nth-of-type(2):hover{
+        opacity: .8;
+        cursor: pointer;
+    }
+    #pre-footer{
+        width: 100%;
+        background-color: hsl(12, 88%, 59%);
+        /* height: 30vh; */
+        overflow: hidden;
+        position: relative;
+    }#pre-footer .container{
+        display: flex;
+        flex-direction: row;
+    }
+    #pre-footer img{
+        display: none;
+    }
+    #pre-footer .button{
+        margin-top: 5vw;
+        color: hsl(12, 88%, 59%) !important;
+    }
+    #pre-footer h1 {
+        text-align: start;
+        font-size: 2.5em;
+        width: 60%;
+        position: relative;
+        left: -5%;
+        bottom: 1em;
+    }
+    #pre-footer::before{
+        top: -27%;
+        left: -8%;
+        filter: opacity(10%);
+        z-index: 0;
+    }
+    #pre-footer::after{
+        z-index: 0;
+        bottom: 23%;
+        right: -38%;
+        filter: opacity(10%);
+    }
+    footer .container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+   #links{
+       display: flex;
+       flex-direction: column-reverse;
+       width: 20%;
+       justify-content: space-between;
+       align-items: center;
+       /* height: auto; */
+   }
+   #footer-logo, #search-wrapper{
+       margin: 1em 0;
+   }
+   #footer-logo img{
+       filter:invert(1);
+   }
+   footer nav{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+   }
+   footer nav ul{
+        margin: 0;
+        height: 8em;
+        align-content: space-between;                
+    }
+   #top{
+       display: flex;
+       flex-direction: column;
+       width: 33%;
+       justify-content: space-between;
+       /* height: 10em; */
+   }
+   .email{
+       /* display: flex; */
+        text-align: start;
+        color: red;
+   }
+   #top p{
+       display: flex;
+       text-align: end;
+       font-size: clamp(14px, 14px, 16px);
+   }
+   #search-wrapper{
+       display:flex;
+       width: 100%;
+       justify-content: space-around;
+       /* overflow: visible; */
+   }
+   footer input{
+    padding: 3.2em;
+    border: 2px solid red;
+    width: 15em;
+    margin: -5vh;
+   }
+   footer input[placeholder]{
+       padding-left: 7vh;
+   }
+   .attribution, .attribution a{
+       font-size: 12px;
+       padding: .5em;
+   }
+   svg path:hover, li:hover{
+       fill: hsl(12, 88%, 59%);
+       color:hsl(12, 88%, 59%);
+       cursor: pointer;
+   }
+}
